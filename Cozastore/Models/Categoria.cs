@@ -1,10 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 namespace Cozastore.Models;
-
-[Table("Cor")]
-public class Cor
+[Table("Categoria")]
+public class Categoria
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
