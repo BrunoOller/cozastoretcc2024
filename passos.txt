@@ -1,0 +1,13 @@
+Configurar o Git Local
+
+--> Bruno
+git config --global user.name "BrunoOller"
+git config --global user.email brunobrunelli4@gmail.com
+
+--> G5
+git config --global user.name "guibisegabriel"
+git config --global user.email guilherme19.b07@gmail.com
+
+Criar o projeto
+--  dotnet new mvc -o Cozastore
+
