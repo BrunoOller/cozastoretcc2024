@@ -28,5 +28,6 @@ public class Categoria
     public Categoria CategoriaMae { get; set; }
 
     public ICollection<Produto> Produtos { get; set; }
+    // Categoria
 
 }
