@@ -9,12 +9,22 @@ public class Categoria
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe o Nome")]
-    [StringLength(30, ErrorMessage = "O Nome deve possuir 30 caracteres")]
-    public string Nome {get; set; }
+    [StringLength(30, ErrorMessage = "O Nome deve possuir no máximo 30 caracteres")]
+    public string Nome { get; set; }
 
-    [Display(Name = "Código Hexa", Prompt = "Ex. #FEFEFE")]
-    [Required(ErrorMessage = "Por favor, informe o Código Hexa")]
-    [StringLength(30, ErrorMessage = "O Código Hexa deve possuir 30 caracteres")]
-    public string CodigoHexa {get; set; }
+    [StringLength(300)]
+    public string Foto { get; set; }
+
+    [Display(Name = "Exibir como Filtro?")]
+    public bool Filtrar { get; set; }
+
+    [Display(Name = "Exibir como Banner?")]
+    public bool Banner { get; set; }
+
+    [Display(Name = "Categoria Mãe")]
+    public int? CategoriaMaeId { get; set; }
+
+    [ForeignKey("CategoriaMaeId")]
+    public Categoria CategoriaMae { get; set; }
 
 }
