@@ -14,7 +14,15 @@ Criar o projeto
 NuGet Gallery
 Shift + Crtl + P
 - Pesquisar e instalar:
+    Microsoft.EntityFrameworkCore.Tools
+    Microsoft.EntityFrameworkCore.SqlServer.
     EntityframeworkCore
     EntityframeworkCore.Design
     EntityframeworkCore.InMemory
     AspNetCore.Identitty.EntityframeworkCore
+
+Executar no terminal:
+dotnet tool install --global dotnet-aspnet-codegenerator --version 8.0.1
+
+Criar um Controller - CRUD:
+dotnet-aspnet-codegenerator controller -name CoresController -m Cor -dc AppDbContext --relativeFolderPath Controllers -udl

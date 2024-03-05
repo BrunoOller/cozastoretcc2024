@@ -14,7 +14,7 @@ public class ProdutoFoto
     [Required(ErrorMessage = "Por favor, informe o Produto")]
     public int ProdutoId { get; set; }
 
-    [ForeignKey("Produto")]
+    [ForeignKey("ProdutoId")]
     public Produto Produto { get; set; }
 
     [Required(ErrorMessage = "Por favor, faça o upload da Foto")]

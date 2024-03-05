@@ -13,21 +13,18 @@ public class Estoque
     [Display(Name = "Produto")]
     [Required(ErrorMessage = "Por favor, informe o Produto")]
     public int ProdutoId { get; set; }
-
     [ForeignKey("ProdutoId")]
     public Produto Produto { get; set; }
 
     [Display(Name = "Tamanho")]
     [Required(ErrorMessage = "Por favor, informe o Tamanho")]
     public int TamanhoId { get; set; }
-
     [ForeignKey("TamanhoId")]
     public Tamanho Tamanho { get; set; }
 
     [Display(Name = "Cor")]
     [Required(ErrorMessage = "Por favor, informe a Cor")]
     public int CorId { get; set; }
-
     [ForeignKey("CorId")]
     public Cor Cor { get; set; }
     
