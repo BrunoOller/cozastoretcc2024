@@ -1,4 +1,5 @@
 using Cozastore.Models;
+using CozaStore.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,7 @@ public class AppDbContext : IdentityDbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+        AppDbSeed seed = new(builder);
 
         #region Relacionamento de Muitos para Muitos - Estoque
 
